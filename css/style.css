@@ -620,6 +620,13 @@ button,
   padding: 20px;
 }
 
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover {
+  background: #0835f9;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -966,6 +973,9 @@ select {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .ba-info__title {

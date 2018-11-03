@@ -85,7 +85,9 @@ button,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
-.ba-button:hover {}
+.ba-button:hover {
+	background: #0835f9;
+}
 
 input[type="text"],
 input[type="email"],
@@ -108,7 +110,9 @@ input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
-select:focus {}
+select:focus {
+
+}
 
 textarea {}
 
@@ -394,6 +398,7 @@ textarea {}
 	.ba-intro-block {
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
 	}
 	&__title {
 
