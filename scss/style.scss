@@ -1,33 +1,91 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
+@import "normalize";
+@import "layout";
+$base-font-family: 'Josefin Sans',
+sans-serif;
+$primary-color: #5474fd;
 
+@font-face {
+	font-family: 'aleo';
+	src: url('../fonts/aleo-regular-webfont-webfont.woff2') format('woff2'),
+		url('../fonts/aleo-regular-webfont-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+	color: #fff;
+	font-family: $base-font-family;
+}
+
+html {
+	border: 15px solid #fff;
+}
+
+// $header-font-family: 'Josefin Sans', sans-serif;
+a {
+	text-decoration: none;
+	color: currentColor;
+
+	&:hover,
+	&:focus {
+		color: red;
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 20px;
+	font-weight: 700;
 }
 
 /* Layout */
-.ba-container{
+.ba-container {
 	padding-left: 20px;
 	padding-right: 20px;
-	max-width: 1200px;
+	max-width: 1150px;
+	position: relative;
 }
-
+p {
+	font-family: $base-font-family;
+	font-weight: 300;
+}
 /* Typography */
 a,
 input[type="submit"],
 input[type="button"],
-button{
+button {
+	font-weight: 300;
 	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 }
+
 input[type="submit"],
 input[type="button"],
 button,
-.ba-button{
+.ba-button {
+	width: 29%;
 	display: inline-block;
+	text-transform: uppercase;
+	background-color: $primary-color;
+	border: 2px solid #fff;
+	padding: 20px;
 }
+
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
-.ba-button:hover{
-
-}
+.ba-button:hover {}
 
 input[type="text"],
 input[type="email"],
@@ -36,6 +94,11 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
+	padding: 20px 0 20px 100px;
+	color: $primary-color;
+	font-size: 20px;
+	border: 2px solid #fff;
+	width: 100%;
 	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 }
 
@@ -45,9 +108,297 @@ input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
-select:focus {
+select:focus {}
 
+textarea {}
+
+.ba-search-form {
+	max-width: 650px;
+	margin: 50px auto;
 }
-textarea {
+.ba-form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 112px;
+}
+.ba-scroll {
+	letter-spacing: 1.5px;
+	word-spacing: 1px;
+	font-weight: 300;
+	display: inline-block;
+}
+.btn-search i {
+	margin-left: 5px;
+	font-size: 20px;
+}
+.ba-search {
+	font-family: aleo, sans-serif;
+	letter-spacing: 2px;
+}
 
+.ba-intro {
+	background: url(../img/bg1.jpg) 50% no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 265px 69px;
+	height: 100vh;
+}
+
+.ba-title {
+	font-family: $base-font-family;
+	text-transform: uppercase;
+	font-size: 48px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	margin-bottom: 7px;
+}
+
+.ba-title-desc {
+	font-size: 22px;
+	font-weight: 300;
+	font-family: $base-font-family;
+	letter-spacing: 6px;
+}
+
+.ba-menu-bar {
+	background: $primary-color;
+	padding: 26px 0;
+}
+
+.ba-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__list {
+		font-weight: 400;
+		font-family: aleo, sans-serif;
+		display: flex;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.ba-menu__list li+li {
+	margin-left: 42px;
+}
+
+.ba-logo {
+	text-transform: uppercase;
+	font-size: 24px;
+	letter-spacing: 1.5px;
+}
+
+.ba-about {
+	background: url(../img/bg2.jpg) 50% no-repeat;
+	background-size: cover;
+	padding: 100px 0 120px 0;
+}
+
+.ba-about p {
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+
+.btn {
+	background-color: $primary-color;
+	font-family: Aleo, sans-serif;
+	letter-spacing: 1.2px;
+	padding: 22px 38px;
+	margin-top: 13px;
+	text-transform: uppercase;
+	display: inline-block;
+	&:hover {
+		background-color: #0835f9;
+	}
+}
+
+.ba-about-img-top {
+	position: relative;
+	top: 22px;
+	right: -66px;
+}
+
+.ba-about-img-bot {
+	position: relative;
+	bottom: -23px;
+	right: -191px;
+}
+
+.ba-about-text {
+	padding-top: 100px;
+
+	& p {
+		font-weight: 300;
+		padding-left: 1px;
+		letter-spacing: 1px;
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 28px;
+	}
+}
+
+.ba-flex-end {
+	justify-content: flex-end;
+}
+
+.ba-section-tittle {
+	font-family: Aleo, sans-serif;
+	font-size: 36px;
+	margin-bottom: 60px;
+}
+
+.ba-booking-one {
+	background: url(../img/bg3.jpg) 50% no-repeat;
+	background-size: cover;
+	padding: 229px 0 100px;
+}
+
+.ba-booking-two {
+	background: url(../img/bg4.jpg) 50% no-repeat;
+	background-size: cover;
+	padding: 229px 0 100px;
+}
+
+.ba-booking-info {
+	background-color: rgba(35, 35, 35, 0.9);
+	padding: 30px 30px 50px;
+
+	&__title {
+		margin-top: 20px;
+		font: 300 20px/1 $base-font-family;
+		letter-spacing: 1px;
+		margin-bottom: 30px;
+	}
+
+	&__desc {
+		font: 300 20px/1 $base-font-family;
+		text-transform: uppercase;
+		letter-spacing: -0.4px;
+		word-spacing: -2px;
+		margin-bottom: 23px;
+	}
+
+	& p {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1.6;
+		letter-spacing: -0.6px;
+		margin-bottom: 28px;
+		text-align: justify;
+	}
+}
+
+.btn-now {
+	height: 60px;
+	width: 225px;
+	background-color: $primary-color;
+	font-family: Aleo, sans-serif;
+	letter-spacing: 1.2px;
+	padding: 22px 38px;
+	margin-top: 14px;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+
+	&:hover {
+		background-color: #0835f9;
+	}
+}
+.ba-flex {
+	display: flex;
+}
+.ba-reviews {
+	background: url(../img/bg5.jpg) 50% no-repeat;
+	background-color:  #333333;
+	background-size: cover;
+	text-align: center;
+	padding: 116px 0 200px;
+	h2 {
+		letter-spacing: 0.4px;
+		margin-bottom: 93px;
+	}
+	.ba-rew-block {
+		background-color:  #333333;
+	}
+	.ba-w40 {
+		width: 40%;
+	}
+	.ba-w60 {
+		width: 60%;
+		padding: 50px 54px 0 60px;
+
+		h3 {
+			text-align: left;
+			font-family: $base-font-family;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 0.3px;
+			padding-top: 1px;
+			margin-bottom: 42px;
+		}
+		p {	
+			font-size: 16px;
+			line-height: 1.4;
+			text-align: justify;
+			letter-spacing: 0.6px;
+			word-spacing: 1.5px;
+			i {	
+				color: $primary-color;
+				position: relative;
+				bottom: 18px;
+				font-size: 20px;
+				margin-right: 2px;
+			}
+		}
+	}
+	.ba-w40 img {
+		display: block;
+		width: 100%;
+	}
+}
+.ba-footer {
+	background-color:  #232323;
+	padding: 122px 0;
+	text-align: center;
+	.ba-socials {
+		display: flex;
+		justify-content: center;
+		color:  #e8e8e8;
+		margin-top: 28px;
+		&__icon {
+			fill: currentColor;
+		}
+		a + a {
+			margin-left: 21px;
+		}
+		a:hover{
+			color: $primary-color;
+		}
+	}
+	h3 {
+		font-size: 24px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		margin-bottom: 10px;
+	}
+	p {
+		margin-top: 11px;
+		letter-spacing: 1px;
+	}
+}
+.ba-info {
+	background-color:  #6b6868;
+	padding: 82px 0 110px;
+	.ba-intro-block {
+		display: flex;
+		justify-content: space-around;
+	}
+	&__title {
+
+		font-family: aleo, sans-serif;
+		font-weight: 400;
+		font-size: 36px;
+	}
 }
